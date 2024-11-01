@@ -11,11 +11,15 @@ router.get('/', function(req, res, next) {
 router.get('/login',(req,res)=>{
   res.render('./user/login');
 });
-router.post('/signup',(req,res)=>{
+router.post('/login',(req,res)=>{
   console.log(req.body)
   console.log('hi')
  // userHelpers.doSignup(req.body).then((response)=>{
 
   //})
+})
+ 
+router.get('/signup',(req,res)=>{
+  res.render('./user/signup')
 })
 module.exports = router;
